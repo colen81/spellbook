@@ -1,18 +1,23 @@
 const button = document.querySelector('button')
-const heading = document.querySelector('h1')
+const heading = document.getElementById('1h')
 const secondHeading = document.getElementById('two')
-var formInput = document.getElementById('input2').value
-const subButton = document.querySelector('sbm')
-
+const subButton = document.getElementById('example')
+// inital variables
 function sayYeah()
 {
-  secondHeading.textContent = "JavaScript is fun"
+  heading.textContent = "JavaScript is fun"
+  // change heading to that input
 }
-button.addEventListener('click',sayYeah)
-subButton.addEventListener('useForm',function()
+button.addEventListener('click',sayYeah,)
+// add event listener ot button
+function sayNo()
 {
-  console.log('formInput')
-  heading.textContent = formInput
-})
+  var formInput = document.getElementById('input2').value
+  // the text input value is assinged to formInput
+  secondHeading.textContent = formInput
+  // text content of the second heading is assigned to formINput
+}
+subButton.addEventListener('click',sayNo,)
+// add event listener to submit button
 
 
