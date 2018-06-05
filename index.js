@@ -20,4 +20,13 @@ function sayNo()
 subButton.addEventListener('click',sayNo,)
 // add event listener to submit button
 
-
+document.addEventListener('keyup',function(event)
+{
+  event.preventDefault()
+  if (event.keyCode === 13)
+  {
+    var formInput2 = document.getElementById('input2').value
+    secondHeading.textContent = formInput2
+    return true;
+  }
+})
