@@ -1,25 +1,30 @@
 const form = document.querySelector('form')
+const but = document.querySelector('button')
 const changeHeading = function(ev) {
   ev.preventDefault()
 
   const f = ev.target
   const spellName = f.spellName.value
-
+  console.log(spellName)
   const spellsDiv = document.querySelector('#spells')
   spellsDiv.innerHTML += `<p>${spellName}</p>`
-
+  const color = f.spellNames.value
+  
+    if (color == 'exit')
+    {
+      console.log('wat')
+      window.open('', '_self', '').close();
+    }
   f.reset()
 }
-function changeColor()
+const closeWindows = function(ev)
 {
-  var input = document.getElementById('color')
-  if (input.value == "red")
-  {
-    document.body.style.backgroundColor = "RED"
-  }
-  else{
-    console.log("xd")
-  }
+  ev.preventDefault()
+  const f = ev.target
+  f.reset()
+
+
 }
-changeColor();
 form.addEventListener('submit', changeHeading)
+but.addEventListener('submit',closeWindows)
+
