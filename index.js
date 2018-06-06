@@ -1,32 +1,28 @@
 const form = document.querySelector('form')
-const but = document.querySelector('button');
 var array = []
-const changeHeading = function(ev) {
+const handleSubmit = function(ev) {
   ev.preventDefault()
 
   const f = ev.target
   const spellName = f.spellName.value
+  const level = f.level.value
   array.push(spellName)
-  const spellsDiv = document.querySelector('#spells')
-  const button = document.createElement('button')
+  const nameSpan = document.createElement('span')
+  nameSpan.classList.add('spellName')
+  nameSpan.textContent = spellName
 
-  spellsDiv.appendChild(button)
-  console.log(array)
-  console.log(spellName)
-  for (let i = 0; i< array.length;i++)
-  {
-    if (array.includes(spellName))
-  {
-      spellsDiv.innerHTML += `<p>${spellName}</p>`
-  }
-  }
-  const color = f.spellNames.value
-  
-    if (color == 'javascript')
-    {
-      alert('The dodo bird went extinct in 1662!')
-    }
+  const levelSpan = document.createElement('span')
+  levelSpan.classList.add('level')
+  levelSpan.textContent = level
+
+  const item = document.createElement('li')
+  item.appendChild(nameSpan)
+  item.appendChild(levelSpan)
+
+  const list = document.querySelector('#spells')
+  list.appendChild(item)
+
   f.reset()
 }
-form.addEventListener('submit', changeHeading)
 
+form.addEventListener('submit', handleSubmit)
