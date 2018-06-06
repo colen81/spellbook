@@ -1,5 +1,4 @@
 const form = document.querySelector('form')
-
 const changeHeading = function(ev) {
   ev.preventDefault()
 
@@ -11,5 +10,16 @@ const changeHeading = function(ev) {
 
   f.reset()
 }
-
+function changeColor()
+{
+  var input = document.getElementById('color')
+  if (input.value == "red")
+  {
+    document.body.style.backgroundColor = "RED"
+  }
+  else{
+    console.log("xd")
+  }
+}
+changeColor();
 form.addEventListener('submit', changeHeading)
