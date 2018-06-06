@@ -10,21 +10,11 @@ const changeHeading = function(ev) {
   spellsDiv.innerHTML += `<p>${spellName}</p>`
   const color = f.spellNames.value
   
-    if (color == 'exit')
+    if (color == 'javascript')
     {
-      console.log('wat')
-      window.open('', '_self', '').close();
+      alert('The dodo bird went extinct in 1662!')
     }
   f.reset()
 }
-const closeWindows = function(ev)
-{
-  ev.preventDefault()
-  const f = ev.target
-  f.reset()
-
-
-}
 form.addEventListener('submit', changeHeading)
-but.addEventListener('submit',closeWindows)
 
