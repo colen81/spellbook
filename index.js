@@ -7,9 +7,11 @@ const handleSubmit = function(ev) {
   const spellName = f.spellName.value
   const level = f.level.value
   array.push(spellName)
+  
   const nameSpan = document.createElement('span')
   nameSpan.classList.add('spellName')
   nameSpan.textContent = spellName
+  nameSpan.setAttribute('title',spellName)
 
   const levelSpan = document.createElement('span')
   levelSpan.classList.add('level')

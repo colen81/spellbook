@@ -141,6 +141,12 @@ input.small {
 
 .spellName {
   text-decoration: underline;
+  width: 80%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.1rem;
+  white-space: nowrap;
+
 }
 
 .level {
@@ -149,5 +155,5 @@ input.small {
 #spells li {
   display: flex;
   justify-content: space-between;
-  
+
 }
