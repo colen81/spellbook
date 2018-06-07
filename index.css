@@ -174,3 +174,9 @@ button.fav {
 .spell.fav {
   background-color: goldenrod;
 }
+button.moveup {
+  background-color: #fefefe;
+}
+button.movedown {
+  background-color: coral;
+}
