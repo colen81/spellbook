@@ -1,3 +1,4 @@
+var array = []
 const app = {
   init: function() {
     const form = document.querySelector('form')
@@ -43,7 +44,12 @@ const app = {
       name: f.spellName.value,
       level: f.level.value,
     }
-
+    var obj = {}
+    obj["name"] = spell.name
+    obj["level"] = spell.level
+    array.push(obj)
+    console.log(array)
+   
     const item = this.renderItem(spell)
 
     const list = document.querySelector('#spells')
@@ -51,6 +57,6 @@ const app = {
 
     f.reset()
   },
+  
 }
-
 app.init()
