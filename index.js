@@ -56,12 +56,12 @@ const app = {
     const delB = document.createElement('button')
     delB.textContent = 'Delete'
     delB.type = 'click'
-    var name1 = spell.name
-    list.appendChild(delB)
+    var name1 = spell.name  
+    item.appendChild(delB)
     delB.addEventListener('click',function()
     {
       list.removeChild(item)
-      list.removeChild(delB)
+      item.removeChild(delB)
     })
 
     f.reset()
