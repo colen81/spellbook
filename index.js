@@ -48,15 +48,29 @@ const app = {
     obj["name"] = spell.name
     obj["level"] = spell.level
     array.push(obj)
-    console.log(array)
    
     const item = this.renderItem(spell)
 
     const list = document.querySelector('#spells')
     list.appendChild(item)
+    const delB = document.createElement('button')
+    list.appendChild(delB)
+    delB.addEventListener('click',function()
+    {
+      list.removeChild(item)
+      list.removeChild(delB)
+      array.pop(obj)
+    })
+    console.log(array)
 
     f.reset()
   },
+  handleDelete : function(ev)
+  {
+    ev.preventDefault()
+    const f = ev.target
+  }
+
   
 }
 app.init()
