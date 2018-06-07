@@ -54,14 +54,15 @@ const app = {
     const list = document.querySelector('#spells')
     list.appendChild(item)
     const delB = document.createElement('button')
+    delB.textContent = 'Delete'
+    delB.type = 'click'
+    var name1 = spell.name
     list.appendChild(delB)
     delB.addEventListener('click',function()
     {
       list.removeChild(item)
       list.removeChild(delB)
-      array.pop(obj)
     })
-    console.log(array)
 
     f.reset()
   },

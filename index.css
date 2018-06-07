@@ -108,7 +108,14 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #dca936;
 }
-
+button[type="click"] {
+  background-color: rgb(19, 156, 247);
+  width: 75px;
+  height: 25px;
+  color: #0a0a0a;
+ 
+  
+}
 main {
   box-sizing: border-box;
   background-image: url(parchment.jpg);
