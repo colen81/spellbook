@@ -161,13 +161,16 @@ button.delete {
   background-color: #ff3333;
   color: white;
 }
+
 button.fav {
-  background-color: rgb(29, 212, 53);
-  color: white;
+  background-color: #F8BE3D;
+  color: black;
 }
-img#heart {
-  padding-left: 30vw;
-}
+
 .template {
   display: none;
+}
+
+.spell.fav {
+  background-color: goldenrod;
 }

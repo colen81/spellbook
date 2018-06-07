@@ -27,26 +27,35 @@ const app = {
 
     properties.forEach(property => {
       const el = item.querySelector(`.${property}`)
-      el.textContent = spell[property]
-      el.setAttribute('title', spell[property])
+      if (el) {
+        el.textContent = spell[property]
+        el.setAttribute('title', spell[property])
+      }
     })
 
-    // add the delete button
+    // delete button
     item
       .querySelector('button.delete')
       .addEventListener(
         'click',
         this.removeSpell.bind(this, spell)
       )
-    item.querySelector('button.fav')
-    item.addEventListener('click', function()
-  {
-      const i = document.createElement('img')
-      i.src = 'heart.png'
-      i.height = 50
-      item.appendChild(i)
-  })
+
+    // fav button
+    item
+      .querySelector('button.fav')
+      .addEventListener(
+        'click',
+        this.toggleFavorite.bind(this, spell)
+      )
+
     return item
+  },
+
+  toggleFavorite: function(spell, ev) {
+    const button = ev.target
+    const item = button.closest('.spell')
+    spell.favorite = item.classList.toggle('fav')
   },
 
   removeSpell: function(spell, ev) {
@@ -66,6 +75,7 @@ const app = {
     const spell = {
       name: f.spellName.value,
       level: f.level.value,
+      favorite: false,
     }
 
     this.spells.push(spell)
