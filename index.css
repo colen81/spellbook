@@ -17,14 +17,6 @@ img#skull {
   transform: rotate(15deg);
   width: 25vw;
 }
-img#wizard {
-  position: absolute;
-  right: 30vw;
-  top: 0vw;
-  width: 15vw;
-  height: 15vw;
-  
-} 
 
 img#quill {
   position: absolute;
@@ -168,4 +160,14 @@ input.small {
 button.delete {
   background-color: #ff3333;
   color: white;
+}
+button.fav {
+  background-color: rgb(29, 212, 53);
+  color: white;
+}
+img#heart {
+  padding-left: 30vw;
+}
+.template {
+  display: none;
 }

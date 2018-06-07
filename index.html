@@ -10,7 +10,6 @@
 <body>
   <img src="skull.png" id="skull" alt="">
   <img src="quill.png" id="quill" alt="">
-  <img src="wizard.gif" id ='wizard' alt="">
 
   <h1>Spellbook</h1>
 
@@ -28,14 +27,20 @@
         placeholder="Level"
         class="small"
         min="1"
-        max="20000"
+        max="2000000"
       >
       <button type="submit">Add</button>
     </div>
   </form>
 
   <main>
-    <ul id="spells" >
+    <ul id="spells">
+        <li class="spell template">
+          <span class="name"></span>
+          <span class="level"></span>
+          <button class="delete">del</button>
+          <button class= "fav">fav</button>
+        </li>
     </ul>
   </main>
 
