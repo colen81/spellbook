@@ -3,7 +3,7 @@ class App {
     this.spells = []
     this.template = document.querySelector('.spell.template')
     this.list = document.querySelector('#spells')
-
+    this.load()
     const form = document.querySelector('form')
     form.addEventListener('submit', (ev) => {
       ev.preventDefault()
@@ -16,6 +16,11 @@ class App {
       'spells',
       JSON.stringify(this.spells)
     )
+  }
+
+  load() {
+    const spellJSON = localStorage.getItem('spells')
+    const spellArray = JSON.parse(spellJSON)
   }
 
   renderProperty(name, value) {
