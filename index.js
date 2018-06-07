@@ -56,7 +56,6 @@ const app = {
     const delB = document.createElement('button')
     delB.textContent = 'Delete'
     delB.type = 'click'
-    var name1 = spell.name  
     item.appendChild(delB)
     delB.addEventListener('click',function()
     {
@@ -66,11 +65,6 @@ const app = {
 
     f.reset()
   },
-  handleDelete : function(ev)
-  {
-    ev.preventDefault()
-    const f = ev.target
-  }
 
   
 }
